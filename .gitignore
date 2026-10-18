@@ -1,0 +1,44 @@
+Set-Location "C:\Users\dattu\OneDrive\Desktop\project code\evoting-dapp"
+
+$utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+
+$gitignoreContent = @'
+# Node dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Hardhat build artifacts & cache
+artifacts/
+cache/
+typechain/
+typechain-types/
+
+# Client build outputs & local Vite cache
+client/node_modules/
+client/dist/
+client/dist-ssr/
+client/.vite/
+*.local
+
+# Environment variables & private keys (CRITICAL FOR BLOCKCHAIN PROJECTS)
+.env
+.env.*
+!.env.example
+secrets.json
+
+# Editor & OS files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+'@
+
+[System.IO.File]::WriteAllText("$PWD/.gitignore", $gitignoreContent, $utf8NoBom)
