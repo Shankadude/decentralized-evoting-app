@@ -1,0 +1,19 @@
+# Environment & Runtime
+node>=18.0.0
+npm>=9.0.0
+git>=2.30.0
+
+# Browser Extension
+metamask>=11.0.0
+
+# Root / Smart Contract Backend Dependencies (Node Modules)
+hardhat>=2.22.0
+@nomicfoundation/hardhat-toolbox>=5.0.0
+@openzeppelin/contracts>=5.0.0
+ethers>=6.13.0
+
+# Frontend Client Dependencies (Node Modules)
+react>=18.3.1
+react-dom>=18.3.1
+vite>=5.4.0
+@vitejs/plugin-react>=4.3.0
